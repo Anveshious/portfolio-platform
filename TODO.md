@@ -3,11 +3,11 @@
 Order matters: finish sections 1 and 2 before any frontend work. Status of the foundation itself lives in `CLAUDE.md` (section 11).
 
 ## 1. Owner setup (you)
-- [ ] Create a Supabase project; put URL, anon key and service-role key in `.env.local`
-- [ ] Find your numeric GitHub ID (`curl https://api.github.com/users/<you>`) and set `ADMIN_GITHUB_ID`
-- [ ] Create a GitHub OAuth app; add its client ID/secret to Supabase (Auth → Providers → GitHub)
-- [ ] Supabase Auth: set Site URL; add `http://localhost:3000/auth/callback` to redirect URLs
-- [ ] Generate `GITHUB_WEBHOOK_SECRET` and `CRON_SECRET` (`openssl rand -hex 32`)
+- [x] Create a Supabase project; put URL, anon key and service-role key in `.env.local`
+- [x] Find your numeric GitHub ID (`curl https://api.github.com/users/<you>`) and set `ADMIN_GITHUB_ID`
+- [x] Create a GitHub OAuth app; add its client ID/secret to Supabase (Auth → Providers → GitHub)
+- [x] Supabase Auth: set Site URL; add `http://localhost:3000/auth/callback` to redirect URLs
+- [x] Generate `GITHUB_WEBHOOK_SECRET` and `CRON_SECRET` (`openssl rand -hex 32`)
 - [ ] Run the migration (`supabase db push`); confirm the `portfolio-media` bucket exists
 - [ ] **Before first login:** `insert into admin_users (github_user_id, github_login) values (<id>, '<login>');`
 - [ ] After a successful login, disable "Allow new users to sign up"
